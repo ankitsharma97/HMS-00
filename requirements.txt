@@ -1,0 +1,13 @@
+asgiref
+cffi
+cryptography
+Django
+gunicorn
+mysql-connector-python
+packaging
+Pillow
+protobuf
+pycparser
+PyMySQL
+sqlparse
+typing_extensions

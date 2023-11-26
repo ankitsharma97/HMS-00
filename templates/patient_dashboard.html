@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .patient-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .doctor-info p {
+            color: #555;
+        }
+
+        .history{
+            margin-bottom: 20px;
+        }
+
+        .history-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .logout-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .logout-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .logout-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Dashboard</h2>
+
+        <div class="patient-info">
+            <p>Hello, {{ user.username }}!</p>
+            <p>Address: {{ user.patient.address_line1 }}, {{ user.patient.city }}, {{ user.patient.state }} - {{ user.patient.pincode }}</p>
+
+        </div>
+
+        <div class="history">
+            <h3>History</h3>
+            <div class="history-item">
+               
+            </div>
+            
+        </div>
+
+        <div class="logout-link">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

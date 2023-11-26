@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Application</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            background-color: #fff;
+            padding: 10px 20px;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Application</h1>
+    </header>
+
+    <main>
+        <p>This is the home page of My Application</p>
+
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Log In</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Project</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .doctor-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .doctor-info img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .doctor-info p {
+            color: #555;
+        }
+
+        .appointments {
+            margin-bottom: 20px;
+        }
+
+        .appointment-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .logout-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .logout-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .logout-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Doctor Dashboard</h2>
+
+        <div class="doctor-info">
+            <p>Hello, <h3>{{ user.username }}!</h3> </p>
+            <p>Address: {{ user.doctor.address_line1 }}, {{ user.doctor.city }}, {{ user.doctor.state }} - {{ user.doctor.pincode }}</p>
+        
+        </div>
+
+        <div class="appointments">
+            <h3>Upcoming Appointments</h3>
+            <div class="appointment-item">
+               
+            </div>
+            
+        </div>
+
+        <div class="logout-link">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+</head>
+<body>
+    <h2>Welcome to Your Doctor Dashboard</h2>
+    <!-- Display doctor-specific details -->
+    <p>Hello, {{ user.username }}!</p>
+    <p>Address: {{ user.doctor.address_line1 }}, {{ user.doctor.city }}, {{ user.doctor.state }} - {{ user.doctor.pincode }}</p>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html> {% endcomment %}
